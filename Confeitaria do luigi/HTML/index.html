@@ -1,70 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/" href="https://www.logolynx.com/images/logolynx/24/24d398e0cbbbce68a41ffdcde74bd2a8.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
     <title>Confeitaria do luigi</title>
+   <style> 
+    #footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    position: absolute;
+    text-align: center;
+    bottom:auto;
+    left: 0%;
+    right: 0%;
+    color: black;
+    }
+    #bodyStyle{
+        background: color #737373;
+        font-family:'Roboto', sans-serif;
+        color: white;
+    }
+    #StyleH1
+    {
+        margin-top: 100px;
+        color: #f40000;
+        text-align: center;
+
+    }
+    #styleH2
+    {
+        margin-top: 50px;
+        color:#f40000;
+        text-align: center;
+    }
+    #styleUL
+    {
+        color: black;
+        margin-left: 45%;
+    }
+
+    #table,th,td
+    {
+        margin-top: 20px;
+        border: 2px solid black;
+        color: red;
+        margin-left: 45%;
+
+    }
+    #div1
+    {
+        margin-top: 15px;
+        border: 2px solid black;
+        width: 310px;
+        margin-left: 42%;
+     
+    }
+    #btn1 
+    {
+     margin-left: 20%;
+     background-color: cyan;
+     color:black;
+    }
+    #btn2
+    {
+     margin-left: 20%;
+     background-color:#f40000;
+     color:azure;
+    }
+    #btn3
+    {
+        margin-left: 20%;
+        background-color: #34af23;
+        color: white;
+    }
+    </style>
+  
 </head>
-<body>
-<h1>Doces gourmets disponiveis:</h1>
-<ul>
+<body id="bodyStyle">
+<h1 id="StyleH1">Doces gourmets disponiveis:</h1>
+<ul id="styleUL">
     <li>Brigadeiro</li>
     <li>Branquinho</li>
     <li>Ameindom/paçoca</li>
     <li>Morango</li>
     <li>Coco</li>
 </ul>
-<h2>Tabela de quantiade e preço (Caixa com 6 unidades)</h2>
-<table id="1">
+<h2 id="styleH2">Tabela de quantiade e preço (Caixa com 6 unidades)</h2>
+<table id="table">
     <thead>
-    <th>Doce</th>
-    <th>Quant</th>
+    <th>Doces</th>
+    <th>Quantidade</th>
     <th>Preço</th>
     </thead>
     <tbody> 
          <tr> 
             <td>Brigadeiro</td>
             <td>10</td>
-            <td>R$:10</td>
+            <td>R$: 10</td>
         </tr>
         <tr>
             <td>Branquinho</td>
             <td>12</td>
-            <td>R$:15</td>
+            <td>R$: 15</td>
         </tr>
         <tr>
             <td>Amendoim</td>
             <td>15</td>
-            <td>R$:12</td>
+            <td>R$: 12</td>
         </tr>
         <tr>
             <td>Morango</td>
             <td>10</td>
-            <td>R$:10</td>
+            <td>R$: 10</td>
         </tr>
         <tr>
             <td>Coco</td>
             <td>3</td>
-            <td>R$:1.50</td>
+            <td>R$: 1.5</td>
         </tr>
     </tbody>
-</table> <br>
-<form action="#" method="post">
-<label for="form1">Nome:</label>
-<input type="text" name="nome" id="form1" placeholder="Digite aqui seu nome:"> <br> <br>
-<label for="form2">Email:</label>
-<input type="email" name="email" id="form2" placeholder="Digite seu email completo"> <br> <br>
-<label for="form3">Assunto:</label>
-<input type="text" name="assunto" id="form3" placeholder="digite o assunto a ser tratado">
+</table> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7916150505043!2d-51.2210815848851!3d-30.042835681882874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1662735028344!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> Onde nós estamos:</iframe>
+<br>
+<div id="div1">
+    <br>
+    <form action="#" method="post">
+        <label for="form1">Nome:</label>
+        <input type="text" name="nome" id="form1" placeholder="Digite aqui seu nome:"> <br> <br>
+        <label for="form2">Email:</label>
+        <input type="email" name="email" id="form2" placeholder="Digite seu email completo"> <br> <br>
+        <label for="form3">Assunto:</label>
+        <input type="text" name="assunto" id="form3" placeholder="digite o assunto a ser tratado"> <br> <br>
+        <button type="submit" id="btn1">Enviar dados de contato</button> <br> <br>
+        <button type="reset" id="btn2">Apagar dados</button> <br> <br>
+    </form>
+</div>
+<div>
+    <br><br>
+    <a href=" https://wa.me/+5551997215441?text=olá,bom dia,estou chamando referente a um pedido de doces"><button id="btn3">WhatsApp</button></a>
+</div>
 
 
-
-
-</form>
-
-
-
+<footer id="footer">Todos os diretos associados a ®1drakoon1</footer>
 </body>
 </html>
