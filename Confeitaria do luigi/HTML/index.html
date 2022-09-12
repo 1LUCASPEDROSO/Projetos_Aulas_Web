@@ -19,10 +19,10 @@
     bottom:auto;
     left: 0%;
     right: 0%;
-    color: black;
+    color: #a2a2a2;
     }
     #bodyStyle{
-        background: color #737373;
+        background-color: #111111;
         font-family:'Roboto', sans-serif;
         color: white;
     }
@@ -31,6 +31,7 @@
         margin-top: 100px;
         color: #f40000;
         text-align: center;
+        
 
     }
     #styleH2
@@ -38,46 +39,62 @@
         margin-top: 50px;
         color:#f40000;
         text-align: center;
+     
     }
     #styleUL
     {
-        color: black;
+        color: #a2a2a2;
         margin-left: 45%;
     }
 
     #table,th,td
     {
         margin-top: 20px;
-        border: 2px solid black;
-        color: red;
         margin-left: 45%;
+        border: 2px solid black;
+        color: #a2a2a2;
+        
 
     }
-    #div1
+    #styleBlockForms
     {
         margin-top: 15px;
         border: 2px solid black;
         width: 310px;
-        margin-left: 42%;
+        margin-left: 43%;
+        color: #a2a2a2;
      
     }
-    #btn1 
+    #btnEnviarDados
     {
      margin-left: 20%;
      background-color: cyan;
      color:black;
     }
-    #btn2
+    #btnApagarDados
     {
      margin-left: 20%;
      background-color:#f40000;
      color:azure;
     }
-    #btn3
+    #btnWhatsApp
     {
-        margin-left: 20%;
+        margin-left: 46%;
         background-color: #34af23;
         color: white;
+        height: 70px;
+        width: 200px;
+    }
+    #iframeMap
+    {
+        border-top: #737373 2px solid black;
+        margin-left: 40%;
+    }
+    #h3
+    {
+        margin-top: 50px;
+        color:#f40000;
+        text-align: center; 
     }
     </style>
   
@@ -126,9 +143,12 @@
         </tr>
     </tbody>
 </table> 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7916150505043!2d-51.2210815848851!3d-30.042835681882874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1662735028344!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> Onde nós estamos:</iframe>
 <br>
-<div id="div1">
+    <h3 id="h3">Estamos localizados aqui:</h3>
+    <br>
+<iframe id="iframeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7916150505043!2d-51.2210815848851!3d-30.042835681882874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1662735028344!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> Onde nós estamos:</iframe>
+<br>
+<div id="styleBlockForms">
     <br>
     <form action="#" method="post">
         <label for="form1">Nome:</label>
@@ -137,16 +157,19 @@
         <input type="email" name="email" id="form2" placeholder="Digite seu email completo"> <br> <br>
         <label for="form3">Assunto:</label>
         <input type="text" name="assunto" id="form3" placeholder="digite o assunto a ser tratado"> <br> <br>
-        <button type="submit" id="btn1">Enviar dados de contato</button> <br> <br>
-        <button type="reset" id="btn2">Apagar dados</button> <br> <br>
+        <button type="submit" id="btnEnviarDados">Enviar dados de contato</button> <br> <br>
+        <button type="reset" id="btnApagarDados">Apagar dados</button> <br> <br>
     </form>
 </div>
 <div>
     <br><br>
-    <a href=" https://wa.me/+5551997215441?text=olá,bom dia,estou chamando referente a um pedido de doces"><button id="btn3">WhatsApp</button></a>
+    <a href=" https://wa.me/+5551997215441?text=olá,bom dia,estou chamando referente a um pedido de doces"><button id="btnWhatsApp">WhatsApp</button></a>
+    <br><br>
 </div>
 
 
-<footer id="footer">Todos os diretos associados a ®1drakoon1</footer>
+<footer id="footer">
+    <nav>   </nav>
+    Todos os diretos associados a ®1drakoon1</footer>
 </body>
 </html>
