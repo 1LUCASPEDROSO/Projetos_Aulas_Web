@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body
+{
+    margin: 0;  
+    padding-top: 30px;
+}
+/*menu*/
+.menu
+{
+top: 0;
+background-color: #111;
+width: 100%;
+height: 90px;
+position: fixed;
+z-index: 1;
+overflow: hidden    ;
+}
+.logo
+{
+float: left;
+}
+#imagem_logo
+{
+    height:90px;
+}
+.lista
+{
+    float: right;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px 100px 0 0 ;
+}
+li
+{
+    display: inline;
+    padding-left: 30px;
+}
+a
+{
+    text-decoration: none;
+    color:#fff;
+}
+a:hover
+{
+    color:cyan;
+    background-color: gray;
+    padding: 25px 15px 25px 15px;
+    border-radius: 15px;
+}
+.banner
+{
+    width: 100%;
+    height: 160px;
+    background-image: url("https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/6/2019/03/0080_t_pizza-line-logo_2.png");
+    margin-top: 55px;
+}
+#quem_somos
+{
+    background-color: black;
+    width: 100%;
+    height: 160px;
+}
+#Sabores
+{
+    background-color: red;
+    width: 100%;
+    height: 160px;
+}
+#contatos
+{
+    background-color:salmon;
+    width: 100%;
+    height: 160px;
+}
