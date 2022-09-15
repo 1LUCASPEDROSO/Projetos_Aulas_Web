@@ -15,7 +15,7 @@ width: 100%;
 height: 90px;
 position: fixed;
 z-index: 1;
-overflow: hidden    ;
+overflow: hidden;
 }
 .logo
 {
@@ -25,7 +25,13 @@ float: left;
 {
     height:90px;
 }
-.lista
+#pizza
+{
+    background-image: url("https://wallpapersmug.com/download/1600x900/ddcbbf/food-pizza-baking.jpg");
+    width: 1900px;
+    height: 500px;
+}
+#lista
 {
     float: right;
     list-style: none;
@@ -34,7 +40,7 @@ float: left;
     font-family: sans-serif;
     padding: 10px 100px 0 0 ;
 }
-li
+#ulbunner>li
 {
     display: inline;
     padding-left: 30px;
@@ -58,21 +64,35 @@ a:hover
     background-image: url("https://1757140519.rsc.cdn77.org/blog/wp-content/uploads/sites/6/2019/03/0080_t_pizza-line-logo_2.png");
     margin-top: 55px;
 }
-#quem_somos
-{
-    background-color: black;
-    width: 100%;
-    height: 160px;
+#p1
+{   color:#111;
+    font-family:sans-serif;
+    font-size: 20px;
 }
-#Sabores
+#ULsabores
 {
-    background-color: red;
-    width: 100%;
-    height: 160px;
+    margin-top: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+  font-size: 20px;
+  list-style:decimal-leading-zero;
+  color: #111;
+  margin-left: 35%;
 }
-#contatos
+#btn1
 {
-    background-color:salmon;
-    width: 100%;
-    height: 160px;
+    margin-left: 42%;
+    margin-top: 90px;
+    width: 150px;
+    background-color: green;
+    color: white;
+}
+footer
+{
+    font-family: sans-serif;
+    text-align: center;
+    position: absolute;
+    margin-top: 250px;
+    bottom:auto;
+    left: 0%;
+    right: 0%;
 }
