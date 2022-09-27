@@ -8,3 +8,55 @@
     width: 100%;
     height: 10%;
 }
+
+.imgChurras
+{
+height: 500px;
+width: 1200px;
+}
+#h2
+{
+  text-align: center;
+}
+#h5
+{
+text-align: center;
+}
+footer
+{
+    margin-top: 590px;
+    bottom: auto;
+}
+.h1
+{
+text-align: center;
+}
+.p
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#iframeMusica
+{
+    margin-left: 410px;
+    border-color: black;
+    border-bottom-color: blue;
+    box-shadow: 50px;
+    width: 1000px;
+    height: 600px;
+}
+#footer1
+{
+    margin-left: 45%;
+}
+#Diviframe
+{
+    margin-top: 55px;
+}
+#imgBandeira
+{
+    width: 1800px;
+    height: 750px;
+    margin-left: 25px;
+    border-radius: 15px;
+}
