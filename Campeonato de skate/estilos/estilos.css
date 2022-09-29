@@ -6,7 +6,7 @@
 #Banner1
 {
     width: 1900px;
-    height: 450px;
+    height: 490px;
 }
 .carousel-item
 {
@@ -35,5 +35,57 @@ display: flex;
 {
     
     border-color: #111;
+    border-style:solid;
+}
+
+.h1
+{
+    text-align: center;
+}
+#form
+{
+    border-style:hidden;
+    color: #111;
+}
+#LabelNome
+{
+    margin-left: 15px;
+    padding: 25px;
+}
+#LabelTelefone
+{
+    margin-left: 15px;
+    padding: 25px;
+}
+#LabelEmail
+{
+    margin-left: 15px;
+    padding: 25px;
+}
+#BtnEnviar
+{
+    float: center;
+    margin-left: 55px;
+    margin-top: 23px;
+    background-color: #111;
+    color: #fff;
+
+}
+#BtnReset
+{
+    float: center;
+    margin-right: 55px;
+    margin-top: 23px;
+    background-color: #111;
+    color: #fff;
+}
+#BtnWpp
+{
+    float: right;
+
+}
+.nav-item1
+{
+    margin-left: 410px;
 }
 
