@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body
+{
+    font-family:'Roboto', sans-serif;
+}
+#labelPeso
+{
+    margin-top: 5%;
+}
+.formulario
+{
+    margin: 4% 15% 4% 15%;
+    text-align: center;
+    background-color: rgb(20, 204, 20);
+    border-radius: 15px;
+    padding: 0% 20% 0% 20%;
+}
+#imagem
+{
+    width: 50%;
+    height: 290px;
+    border: 1px solid #6666ff;
+    margin-left: 23%;
+}
+.btn-primary
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
