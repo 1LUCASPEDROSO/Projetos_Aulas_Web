@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js">
     <link rel="stylesheet" href="estilos/estilos.css">
-    <script src="javascript/logica.js"></script>
     <title>IMC</title>
 </head>
 <body>
-
     <div class="container-fluid">
         <h1 class="text-center display-4 ch1">Calculo IMC</h1>
         <div class="formulario">
@@ -23,19 +21,14 @@
                 <div>
                     <label for="altura" class="form-label">Altura:</label>
                     <input type="text" id="altura" required placeholder="Ex: 156" class="form-control">
+                    <button class="btn-primary" onclick="resultado(); return false">Calcular</button>
                 </div>
-                <button class="btn-primary" onclick="resultado()">Calcular</button>
             </form>
         </div>
         <div>
             <div id="imagem"></div>
         </div>
-
-
-
-
-
-
     </div>
 </body>
 </html>
+<script src="javascript/logica.js"></script>
