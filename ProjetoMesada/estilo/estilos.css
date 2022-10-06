@@ -1,0 +1,18 @@
+#DivTabela
+{
+margin: 5% 5% 10% 10%;
+ background-color: red;
+height: 500px;
+}
+#tabela
+{
+    border: 2px solid silver;
+}
+#thead
+{
+    border: 2px solid silver;
+}
+td
+{
+    border: 2px solid silver;
+}

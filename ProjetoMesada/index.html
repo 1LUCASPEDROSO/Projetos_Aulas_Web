@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="estilo/estilos.css">
+    <title>Mesada educativa</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="DivTabela">
+            <table id="tabela">
+                 <tr>
+                     <th id="thead">Regras</thead>
+                     <th id="thead">Penalidades</thead>
+                     <th id="thead">Ocorrencias</thead>
+                     <th id="thead">Total:</thead>
+                  </tr>
+                  <tr>
+                <td>faltar,atrasar ou reclamar para ir a escola</td>
+                <td>-R$ 1,00</td>
+                <td id="oc"><input type="text"></td>
+                <td id="Total1"> total</td>
+                <button onclick="CaluclarMesada()">caulcular</button>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>
