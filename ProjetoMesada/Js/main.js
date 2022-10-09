@@ -1,7 +1,8 @@
 var ValorOcorrencia = [0.25,0.50,0.75,1.00]
 var TotalOcorrencia
 var TotalFinal
-const ValorMensal = 100
+var ValorMensal = parseInt(document.querySelector('#inputmesada').value)
+alert(ValorMensal)
 //the name of functions is basead in positon in array valorOcorrencia
 function CaluclarMesada0(){
     var CountOcorrencia = parseInt(document.querySelector('#input0').value)
