@@ -19,10 +19,7 @@ function CaluclarMesada0() {
         TotalOcorrencia = CountOcorrencia * ValorOcorrencia[0]
         TotalFinal = ValorMensal - TotalOcorrencia
         document.querySelector("#total0").value = TotalOcorrencia
-        CaluclarMesada0()
-        CaluclarMesada1()
-        CaluclarMesada2()
-        CaluclarMesada3()
+
         
     }
 }
@@ -72,8 +69,9 @@ function CaluclarMesada3() {
         TotalOcorrencia = CountOcorrencia * ValorOcorrencia[3]
         TotalFinal = ValorMensal - TotalOcorrencia
         document.querySelector("#total3").value = TotalOcorrencia
-    }
-ctx.data.datasets[0],data[0] = ValorMensal;
+        ctx.data.datasets[0],data[0] = ValorMensal;
 ctx.data.datasets[0],data[0] = TotalOcorrencia;
 ctx.uptade()
+    }
+
 }
