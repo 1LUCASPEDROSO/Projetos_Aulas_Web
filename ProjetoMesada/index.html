@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,89 +8,77 @@
     <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js">
     <link rel="stylesheet" href="CSS/estilos.css">
-    <script src="https://www.jsdelivr.com/package/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Mesada educativa</title>
 </head>
+
 <body>
     <div class="container-fluid">
         <h1 class="h1">Calculador de mesada</h1>
         <div id="DivTabela">
             <input id="inputmesada" type="number" placeholder="Digite o valor da mesada">
-                <table id="tabela">
-                    <tr>
-                        <th>Regras</thead>
-                        <th>Penalidades</thead>
-                        <th>Ocorrencias</thead>
-                        <th>Total:</thead>
-                    </tr>
-                    <tr>
-                        <td id="Regra" >faltar,atrasar ou reclamar para ir a escola</td>
-                        <td><span id="Penalidades">R$ -0,25</span></td>
-                        <td id="valor"><input id="input0" type="number"></td>
-                        <td><input id="total0" type="number" disabled></td>
-                    </tr>
-                    <tr>
-                        <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
-                        <td><span id="Penalidades">R$ -0,50</span></td>
-                        <td id="valor"><input id="input1" type="number"></td>
-                        <td><input id="total1" type="number" disabled></td>
-                    </tr>
-                        <tr>
-                            <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
-                            <td><span id="Penalidades">R$ -0,75</span></td>
-                            <td id="valor"><input id="input2" type="number"></td>
-                            <td><input id="total2" type="number" disabled></td>
-                        </tr>
-                            <tr>
-                                <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
-                                <td><span id="Penalidades">R$ -1,00</span></td>
-                                <td id="valor"><input id="input3" type="number"></td>
-                                <td><input id="total3" type="number" disabled ></td>
-                            </tr>
-                </table>
-                <button  id="btn1"onclick="CaluclarMesada0();CaluclarMesada1();CaluclarMesada2();CaluclarMesada3()">caulcular</button>
+            <table id="tabela">
+                <tr>
+                    <th>Regras</thead>
+                    <th>Penalidades</thead>
+                    <th>Ocorrencias</thead>
+                    <th>Total:</thead>
+                </tr>
+                <tr>
+                    <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
+                    <td><span id="Penalidades">R$ -0,25</span></td>
+                    <td id="valor"><input id="input0" type="number"></td>
+                    <td><input id="total0" type="number" disabled></td>
+                    <td><input type="number" id="totalfinalC" placeholder disabled="valor final de mesada"></td>
+                </tr>
+                <tr>
+                    <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
+                    <td><span id="Penalidades">R$ -0,50</span></td>
+                    <td id="valor"><input id="input1" type="number"></td>
+                    <td><input id="total1" type="number" disabled></td>
+                </tr>
+                <tr>
+                    <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
+                    <td><span id="Penalidades">R$ -0,75</span></td>
+                    <td id="valor"><input id="input2" type="number"></td>
+                    <td><input id="total2" type="number" disabled></td>
+                </tr>
+                <tr>
+                    <td id="Regra">faltar,atrasar ou reclamar para ir a escola</td>
+                    <td><span id="Penalidades">R$ -1,00</span></td>
+                    <td id="valor"><input id="input3" type="number"></td>
+                    <td><input id="total3" type="number" disabled></td>
+                </tr>
+            </table>
+            <button id="btn1"
+                onclick="CaluclarMesada0()">caulcular</button>
         </div>
-        <canvas id="myChart" width="400" height="400"></canvas>
-        <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            <script>
+                var xValues = ["Valor inicial", "total ocorrencias"];
+                var yValues = [0, 100];
+                var barColors = [
+                  "#b91d47",
+                  "#00aba9"
+                ];
+                
+               const ctx = new Chart("myChart", {
+                  type: "pie",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    title: {
+                      display: true,
+                      text: "Gafico de mesada"
                     }
-                }
-            }
-        });
-        </script>
-    </div>
+                  }
+                });
+                </script>             
 </body>
 </html>
 <script src="js/main.js"></script>
-<script src="js/grafico.js"></script>
-

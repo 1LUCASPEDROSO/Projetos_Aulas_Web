@@ -1,67 +1,79 @@
-var ValorOcorrencia = [0.25,0.50,0.75,1.00]
-var TotalOcorrencia
-var TotalFinal
-var ValorMensal = parseInt(document.querySelector('#inputmesada').value)
-alert(ValorMensal)
+
+    ValorOcorrencia = [0.25, 0.50, 0.75, 1.00]
+    TotalOcorrencia
+    TotalFinal
+    
+
 //the name of functions is basead in positon in array valorOcorrencia
-function CaluclarMesada0(){
+function CaluclarMesada0() {
+    var ValorMensal = parseInt(document.querySelector('#inputmesada').value)
     var CountOcorrencia = parseInt(document.querySelector('#input0').value)
-    if(CountOcorrencia < 0){
-       alert("Valores negativos não são aceitos")
-        document.querySelector('#input0'.value=0)
-       do{
-           var CountOcorrencia = parseInt(document.querySelector('#input0').value)
-      }while(CountOcorrencia <=0);
+    if (CountOcorrencia < 0) {
+        alert("Valores negativos não são aceitos")
+        document.querySelector('#input0'.value = 0)
+        do {
+            var CountOcorrencia = parseInt(document.querySelector('#input0').value)
+        } while (CountOcorrencia <= 0);
     }
     {
         TotalOcorrencia = CountOcorrencia * ValorOcorrencia[0]
         TotalFinal = ValorMensal - TotalOcorrencia
-        document.querySelector("#total0").value=TotalOcorrencia
+        document.querySelector("#total0").value = TotalOcorrencia
+        CaluclarMesada0()
+        CaluclarMesada1()
+        CaluclarMesada2()
+        CaluclarMesada3()
+        
     }
 }
-function CaluclarMesada1(){
+function CaluclarMesada1() {
+    var ValorMensal = parseInt(document.querySelector('#inputmesada').value)
     var CountOcorrencia = parseInt(document.querySelector('#input1').value)
-    if(CountOcorrencia < 0){
+    if (CountOcorrencia < 0) {
         alert("Valores negativos não são aceitos")
-         document.querySelector('#input1'.value=0)
-        do{
+        document.querySelector('#input1'.value = 0)
+        do {
             var CountOcorrencia = parseInt(document.querySelector('#input1').value)
-       }while(CountOcorrencia <=0);
-     }
-     {
-         TotalOcorrencia = CountOcorrencia * ValorOcorrencia[1]
-         TotalFinal = ValorMensal - TotalOcorrencia
-         document.querySelector("#total1").value=TotalOcorrencia
-     }
+        } while (CountOcorrencia <= 0);
+    }
+    {
+        TotalOcorrencia = CountOcorrencia * ValorOcorrencia[1]
+        TotalFinal = ValorMensal - TotalOcorrencia
+        document.querySelector("#total1").value = TotalOcorrencia
+    }
 }
-function CaluclarMesada2(){
+function CaluclarMesada2() {
+    var ValorMensal = parseInt(document.querySelector('#inputmesada').value)
     var CountOcorrencia = parseInt(document.querySelector('#input2').value)
-    if(CountOcorrencia < 0){
+    if (CountOcorrencia < 0) {
         alert("Valores negativos não são aceitos")
-         document.querySelector('#input2'.value=0)
-        do{
+        document.querySelector('#input2'.value = 0)
+        do {
             var CountOcorrencia = parseInt(document.querySelector('#input2').value)
-       }while(CountOcorrencia <=0);
-     }
-     {
-         TotalOcorrencia = CountOcorrencia * ValorOcorrencia[2]
-         TotalFinal = ValorMensal - TotalOcorrencia
-         document.querySelector("#total2").value=TotalOcorrencia
-     }
+        } while (CountOcorrencia <= 0);
+    }
+    {
+        TotalOcorrencia = CountOcorrencia * ValorOcorrencia[2]
+        TotalFinal = ValorMensal - TotalOcorrencia
+        document.querySelector("#total2").value = TotalOcorrencia
+    }
 }
-function CaluclarMesada3(){
+function CaluclarMesada3() {
+    var ValorMensal = parseInt(document.querySelector('#inputmesada').value)
     var CountOcorrencia = parseInt(document.querySelector('#input3').value)
-    if(CountOcorrencia < 0){
+    if (CountOcorrencia < 0) {
         alert("Valores negativos não são aceitos")
-         document.querySelector('#input3'.value=0)
-        do{
+        document.querySelector('#input3'.value = 0)
+        do {
             var CountOcorrencia = parseInt(document.querySelector('#input3').value)
-       }while(CountOcorrencia <=0);
-     }
-     {
-         TotalOcorrencia = CountOcorrencia * ValorOcorrencia[3]
-         TotalFinal = ValorMensal - TotalOcorrencia
-         document.querySelector("#total3").value=TotalOcorrencia
-     }
+        } while (CountOcorrencia <= 0);
+    }
+    {
+        TotalOcorrencia = CountOcorrencia * ValorOcorrencia[3]
+        TotalFinal = ValorMensal - TotalOcorrencia
+        document.querySelector("#total3").value = TotalOcorrencia
+    }
+ctx.data.datasets[0],data[0] = ValorMensal;
+ctx.data.datasets[0],data[0] = TotalOcorrencia;
+ctx.uptade()
 }
-
