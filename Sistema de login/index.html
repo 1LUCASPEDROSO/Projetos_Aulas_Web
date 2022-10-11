@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="ContainerMain">
+        <div class="ContainerLogin">
+           <img  id="imagemLogin" src="imagens/imagemLogin.png" alt="Login">
+            <form id="Formulariologin" action="" method="get">
+                <label id="formalabels" for="Email">Email</label>
+                <input type="Email" id="Email">
+                <label id="formatlabels" for="Senha">Senha</label>
+                <input type="password" id="Senha">
+                <button id="btnLogin" onclick="Validarlogin()">Login</button>
+                <button id="btnCadastrar" onclick="Mostrardados()">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
