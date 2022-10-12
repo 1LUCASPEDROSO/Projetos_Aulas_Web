@@ -1,7 +1,7 @@
 class importdados
 {
-    #email = document.querySelector("#Email").value
-    #senha = document.querySelector("#Senha").value
+    #email
+    #senha 
 
     get email() {
         return this.#email

@@ -1,20 +1,20 @@
-var email = document.querySelector("#Email").value
-var senha = document.querySelector("#Senha").value
-function Validarlogin() {
-    let id = new importdados()
-    var vetorDados = [id.email + "," + id.senha,]
-    console.log(vetorDados)
-    alert("email;"+vetorDados[0])
-    if(email && senha != vetorDados[0]){
-        alert("login inexistente")
-        window.open("cadastar.hmtl")
+class login {
+    login(){
+        importdados = new importdados()
+        function criarLogin() {
+            importdados.email = document.querySelector("#Email").value
+            importdados.senha = document.querySelector("#Senha").value
+            if(email != "lucas1" && senha != "pedro"){
+               alert("logins incorretos")
+               window.open("Cadastar.html")
+            }
+            else
+            {
+               alert("login feito com sucesso")
+            }
+           }
     }
-    
 }
-function cadastrarlogin(email,senha) {
-    id.email = email
-    id.senha = senha
-    Notification("login feito com sucesso")
-    alert("email:"+email,"senha:"+senha)
-    window.open("index.html")
-}
+
+
+
