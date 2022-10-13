@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>carrinho de compras</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bunner">
+            <h1 class="h1">Produtos em estoque</h1>
+        </div>
+        <div class="produtos">
+            <div id="produto1">
+                <p> Headset gamer sem fio logitech g533</p>
+                <ul>
+                    <li> Autonomia de até 15hrs</li>
+                    <li>Conectivade de até 15 metros</li>
+                 </ul>
+                <div class="imagensprodutos">
+                    <img  id="produto" src="imagens/g533.png" alt="Headset">
+                    <p> preço: <span id="preco">R$ 990,90</span></p>
+                </div>
+                <button class="btnSelecionar"><a href="javascript:adcproduto(produto1,Headset gamer sem fio logitech g533,990)">Selecionar</a></button>
+            </div>
+            <div id="produto2">
+                <p> Notbook gamer i5</p>
+                <ul>
+                    <li> Core i5 10 geração</li>
+                    <li> GTX 1660 Super</li>
+                 </ul>
+                <div class="imagensprodutos">
+                    <img  id="produto" src="imagens/notook.jpeg" alt="Nootbook">
+                    <p> preço: <span id="preco">R$ 5700,90</span></p>
+                </div>
+                <button class="btnSelecionar"><a href="javascript:adcproduto(produto2,Notbook gamer i5,5700)">Selecionar</a></button>
+            </div>
+            <div id="produto3">
+                <p> mouse Razer viper mini</p>
+                <ul>
+                    <li> Ultra leve</li>
+                    <li> Cabo paracord</li>
+                 </ul>
+                <div class="imagensprodutos">
+                    <img  id="produto" src="imagens/vipermini.jpg" alt="Mouse gamer">
+                    <p> preço: <span id="preco">R$ 199,90</span></p>
+                </div>
+                <button class="btnSelecionar"><a href="javascript:adcproduto(produto3,Razer viper mini,199)">Selecionar</a></button>
+            </div>
+        </div>
+        <button><a href="javascript:Mostrarproduto()">Mostrar compras</a></button>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>
