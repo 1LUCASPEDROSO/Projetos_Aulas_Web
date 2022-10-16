@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@700&display=swap');
+
+body
+{
+    background-color: rgb(222, 222, 222);
+}
+
+.container
+{
+    margin: 0vh 0.5vh 0vh 0.5vh;
+    width: 100%;
+}
+.bunner
+{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(230, 28, 28);
+    color: rgb(26, 26, 26);
+    position: relative;
+    border-radius: 15px;
+}
+.h1
+{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    position: absolute;
+    margin: 3% 0% 0% 45%;
+
+}
+.produtos
+{
+ margin: 2% 0% 5% 0% ;
+ width: 2100px;
+ background-color: rgb(228, 228, 228);
+ display:flex
+}
+.produto1
+{
+    border: 1px solid;
+    padding: 0% 2% 0% 2%;
+    display: inline-block;
+}
+p
+{
+    font-family: 'Lato', sans-serif; 
+    font-size: 20px;
+}
+.precoskins
+{
+    color: rgb(233, 13, 13);
+}
+.btnaddcarrinho
+{
+    width: 200px;
+    height: 7vh;
+    margin-bottom: 5%;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: rgb(233, 13, 13);
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+footer
+{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(233, 13, 13);
+    border-radius: 15px;
+    position: relative;
+}
+.pfooter
+{
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    color: rgb(26, 26, 26);
+    margin: 6% 0% 0% 42%;
+}
+.imgfacas:hover
+{
+    -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.1);
+}
+.tabelaprodutos,th,td
+{
+    margin: 2% 2% 5% 2%;
+    border: 1px solid black;
+    width: 90%;
+    height: 10vh;
+    font-family: 'Lato', sans-serif;
+}
