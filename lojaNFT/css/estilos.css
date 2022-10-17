@@ -32,9 +32,8 @@ body
 .produtos
 {
  margin: 2% 0% 5% 0% ;
- width: 2100px;
+ width: 1500px;
  background-color: rgb(228, 228, 228);
- display:flex
 }
 .produto1
 {

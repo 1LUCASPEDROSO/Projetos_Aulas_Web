@@ -2,10 +2,10 @@ var carrinhoCompras = new Array();
 
 function Produtos(cod,nom,prc,qnt)
 {
-    cod = this.codigo;
-    nom = this.nome;
-    prc = this.prc;
-    qnt = this.qnt;
+      this.codigo = cod;
+      this.nome = nom; 
+      this.prc = prc;
+      this.qnt = qnt;
 }
 function adcprodutos(cod,nom,prc,qnt)
 {
@@ -30,7 +30,7 @@ function mostrarcarrinho()
     write('<td>',carrinhoCompras[i].prc,'</td>')
     write('<td>',carrinhoCompras[i].qnt,'</td>')
     write('</tr>')
-    total = parsefloat(carrinhoCompras.prc)
+    total += parseFloat(carrinhoCompras[i].prc)
     }
     write('<tr>')
     write('<td> Total </td')
