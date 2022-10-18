@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste angular</title>
+    <link rel="stylesheet" href="Css/estilos.css">
+    <script src="angular/angular-1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="">
+        <div ng-init="quantidade=5;
+                     preco_unitario=300;
+                     estudante={nome:'pedrinho',
+                     sobrenome:'777',
+                     numLista:35
+                    };
+                    nummatricula=[1111,2222,333,4444]">
+            <p>Como vai: {{estudante.nome+""+estudante.sobrenome}}</p>
+            <p>Total:{{preco_unitario}}</p>
+            <p>Numero na lista:{{estudante.numLista}}</p>
+            <p>Numero de matricula:{{nummatricula[3]}}</p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td><input type="checkbox" ng-model="desabilitar">desativar botão.</td>
+                    <td><button ng-disabled="desabilitar"> clique no chackbox para desabilitar o botão</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="ocultar">Ocultar botão.</td>
+                    <td><button ng-hide="ocultar"> clique no chackbox para ocultar o botão</button></td> 
+                </tr>
+                <tr>
+                    <td><p ng-init="contador=0">Totalizador: {{contador}}</p></td>
+                    <td><button ng-click="contador=contador+1">clique para contalizar os clicks</button></td>
+                </tr>
+            </table>
+        </div>
+
+
+    
+      <script src="Js/main.js"></script>
+</body>
+</html>
