@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="form">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/testesAngular/Formulário em angular/css/main.css"> 
+    <script src="/testesAngular/Formulário em angular/angular/angular-1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        angular.module("form",[]);
+        angular.module("form").controller("lista", function($scope){
+            $scope.app="lista de alunos";
+            $scope.contatos=[
+                             {nome:"lucas",matricula:"182120037",endereco:"90240611",email:"pedrosolucas1745@gmail.com",telefone:"(51)996052142"},
+                             {nome:"fernando",matricula:"182120037",endereco:"90240611",email:"pedrosolucas1745@gmail.com",telefone:"(51)996052142"},
+                             {nome:"camila",matricula:"182120037",endereco:"90240611",email:"pedrosolucas1745@gmail.com",telefone:"(51)996052142"},
+                             {nome:"ana",matricula:"182120037",endereco:"90240611",email:"pedrosolucas1745@gmail.com",telefone:"(51)996052142"},]
+            $scope.ordernar = function(campo){
+                $scope.ordernarNome=campo;
+            }                 
+        });
+    </script>
+</head>
+<body ng-controller="lista">
+    <div class="container">
+        <h1 ng-bind="app"></h1>
+        <input type="text" placeholder="digite o nome para buscar" ng-model="buscar">
+        <table class="w3-table">
+            <thead>
+                <td>selcionado</td>
+                <td><a href="" ng-click="ordernar('nome')">Nome</a></td>
+                <td>matricula</td>
+                <td>Endereço</td>
+                <td>Email</td>
+                <td>Telefone</td>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in contatos | orderBy:ordernarNome:false | filter:{nome:buscar}">
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.matricula}}</td>
+                    <td>{{item.endereco}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.telefone}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+
+
+
+
+    </div>   
+</body>
+</html>
