@@ -20,6 +20,34 @@
             $scope.ordernar = function(campo){
                 $scope.ordernarNome=campo;
             }                 
+            $scope.apagarcontato = function(contatos)
+            {
+                $scope.contatos= contatos.filter(
+                function(item){
+                    if(!item.selecionado)
+                        return item;
+                    
+                }
+                )
+            }
+        
+            $scope.apagar = function (contatos) {
+                $scope.contatos = contatos.filter(
+                    function (item) {
+                        if (!item.selecionado)
+                            return item
+                    }
+                )
+            }
+            $scope.criar=function(){
+            $scope.contatos.push({
+                nome: $scope.nome,
+                matricula:$scope.matricula,
+                endereco: $scope.endereco,
+                email: $scope.email,
+                telefone: $scope.telefone                
+            })
+            } 
         });
     </script>
 </head>
@@ -38,7 +66,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="item in contatos | orderBy:ordernarNome:false | filter:{nome:buscar}">
-                    <td><input type="checkbox" name="" id=""></td>
+                    <td><input type="checkbox" ng-model="item.selecionado"></td>
                     <td>{{item.nome}}</td>
                     <td>{{item.matricula}}</td>
                     <td>{{item.endereco}}</td>
@@ -46,9 +74,14 @@
                     <td>{{item.telefone}}</td>
                 </tr>
             </tbody>
-
         </table>
-
+        <input type="text" name="nome" id="1" placeholder="nome" ng-model="nome">
+        <input type="text" name="matricula" id="2" placeholder="matricula"  ng-model="matricula">
+        <input type="text" name="endereco" id="3" placeholder="cep"  ng-model="cep">
+        <input type="text" name="email" id="4" placeholder="email"  ng-model="email">
+        <input type="text" name="telefone" id="5" placeholder="telefone"  ng-model="telefone">
+        <button ng-click="criar()"> criar aluno</button>
+        <button ng-click="apagarcontato(contatos)"> apagar contato</button>
 
 
 
