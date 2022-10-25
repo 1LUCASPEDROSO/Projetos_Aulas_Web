@@ -13,6 +13,8 @@ function adcprodutos(cod,nom,prc,qnt)
 }
 function mostrarcarrinho()
 {
+    var qntingresso =  parseint(document.querySelector('#1').value)
+    console.log(qntingresso)
     var totalcarrinho;
     with(document){
 
