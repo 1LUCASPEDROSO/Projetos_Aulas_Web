@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul class="ulnavbar">
+                <li><a href="index.html">inicio</a></li>
+                <li>filmes</li>
+                <li>contato</li>
+                <div class="divbtn">
+                    <input type="search" name="pesquisar" id="pesquisa">
+                    <label for="pesquisa" class="inputpesquisa"><span class="material-symbols-outlined">
+                        search
+                        </span></label>
+                </div>
+            </ul>
+        </div>
+        <div class="bunner">
+            <img src="https://ingresso-a.akamaihd.net/catalog/Content/img/placeholder-movie-banner-0e77f061b1.jpg" class="imgbunner" alt="bunner Adão negro">
+            <h1 class="h1">Noite de Paris</h1>
+        </div>
+        <div class="InfosFilmes">
+            <p class="sinopse">Em Noites de Paris, o ano é 1981, eleições, as comemorações se espalham pelas ruas e há um ar de esperança e mudança em Paris. Mas para Elisabeth, seu casamento está chegando ao fim e agora ela terá que sustentar a si mesma e seus dois filhos adolescentes. Após ser deixada por seu marido, Elisabeth se vê sozinha, responsável pelo cuidado diário de sua família. Ela consegue um emprego em um programa de rádio noturno, onde conhece Talulah, uma adolescente problemática que ela decide acolher, a convidando para sua casa. Com eles, Talulah experimenta o calor de uma família pela primeira vez e seu espírito livre tem uma influência transformadora naquela casa. Elisabeth e seus filhos ganham confiança e começam a correr riscos, mudando também a trajetória de suas vidas.</p>
+            <table class="tabaelainfos">
+                <thead>
+                    <th >Selecionar</th>
+                    <th >Dia:</th>
+                    <th >Horário:</th>
+                    <th >Local:</th>
+                    <th >tipo:</th>
+                    <th >sala:</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td ><input type="checkbox" name="selcdata" id="1"></td>
+                        <td>Quarta-feira</td>
+                        <td>14:50</td>
+                        <td>Porto-alegre/RS</td>
+                        <td>Leg</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="selcdata" id="1"></td>
+                        <td>Quinta-feira</td>
+                        <td >17:50</td>
+                        <td >Porto-alegre/RS</td>
+                        <td >Leg</td>
+                        <td >4</td>
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox" name="selcdata" id="1"></td>
+                        <td >Sexta-feira</td>
+                        <td >19:50</td>
+                        <td >Canoas/RS</td>
+                        <td >Dub</td>
+                        <td >1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="Divinputs">
+                <label id="labelingresso" for="ig">Ingresso fixo a R$ 20.00 selecione a quantidade:</label>
+                <input type="number" name="qntingresso" id="ig" required>
+            </div>
+        </div>
+        <div class="cadeira0">
+            <h2 class="h2">Selecione os acentos :</h2>
+            <div class="cadeiras1" onclick="ocuparcadeira1()">1</div>
+            <div class="cadeiras2" onclick="ocuparcadeira2()">2</div>
+            <div class="cadeiras3" onclick="ocuparcadeira3()">3</div>
+            <div class="cadeiras4" onclick="ocuparcadeira4()">4</div>
+            <div class="cadeiras5" onclick="ocuparcadeira5()">5</div>
+            <div class="cadeiras6" onclick="ocuparcadeira6()">6</div>
+            <div class="cadeiras7" onclick="ocuparcadeira7()">7</div>
+            <div class="cadeiras8" onclick="ocuparcadeira8()">8</div>
+            <div class="cadeiras9" onclick="ocuparcadeira9()">9</div>
+            <div class="cadeiras10" onclick="ocuparcadeira10()">10</div>          
+        </div>
+        <button class="btnpgi"><a href="index.html">Voltar a pagina inicial</a></button>
+        <button class="btncomprar"><a href="javascript:adcionaringresso('1','Noite de Paris', 'quinta-feira','14:50','20','LEG','4')">Adcionar ao carrinho</a></button>
+        <button class="btncarrinhp"><a href="javascript:mostrarcarrinho()">Checkout</a></button>
+        <footer> <div class="navbar">
+            <ul class="ulnavbar">
+                <li><a href="index.html">inicio</a></li>
+                <li>filmes</li>
+                <li>contato</li>
+                <div class="divbtn">
+                    <input type="search" name="pesquisar" id="pesquisa">
+                    <label for="pesquisa" class="inputpesquisa"><span class="material-symbols-outlined">
+                        search
+                        </span></label>
+                </div>
+            </ul>
+        </div></footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

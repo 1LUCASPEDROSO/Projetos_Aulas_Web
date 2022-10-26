@@ -31,14 +31,15 @@
        
     console.log(qntingresso)
     write('<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="css/estilos.css"><title>checkout</title></head><body><div class="container"><div class="bunner"><h1 class="h1">Carrinho</h1></div>')
-    write('<table class="tabelaprodutos">')
+    write('<br><br>')
+    write('<table class="tabaelainfos">')
     write('<tr>')
     write('<th>Filme:</th>')
-    write('<th>data:</th>')
-    write('<th>hora:</th>')
+    write('<th>Data:</th>')
+    write('<th>Hora:</th>')
     write('<th>preço:</th>')
-    write('<th>tipo:</th>')
-    write('<th>sala:</th>')
+    write('<th>Tipo:</th>')
+    write('<th>Sala:</th>')
     write('<th>Quantidade de ingressos:</th>')
     write('</tr>')
     total =0
@@ -50,21 +51,68 @@
     write('<td>',ingresso[i].preco,'</td>')
     write('<td>',ingresso[i].tipo,'</td>')
     write('<td>',ingresso[i].sala,'</td>')
-    write('<td>',ingresso[i].hora,'</td>')
     write('<td>',qntingresso,'</td>')
     write('</tr>')
     total += (qntingresso * 20)
     }
     write('<tr>')
-    write('<td> Total </td')
+    write('<td> Total: </td')
     write('<td>',total,'</td>')
     write('</tr></table>')
-    write('<button class="btnaddcarrinho"><a href="index.html">voltar a pagina inicial</a></button')
-    write('<footer><p class="pfooter">Todos os direitos rezervados a 1drakoon1</footer>')
+    write('<br><br>')
+    write('<button class="btnpgi"><a href="index.html">voltar a pagina inicial</a></button')
     write('</body></html>')
 }
 }
+function ocuparcadeira1()
+{
+    let c = document.querySelector(".cadeiras1").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
 
-
-
+function ocuparcadeira2()
+{
+    let c = document.querySelector(".cadeiras2").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira3()
+{
+    let c = document.querySelector(".cadeiras3").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira4()
+{
+    let c = document.querySelector(".cadeiras4").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira5()
+{
+    let c = document.querySelector(".cadeiras5").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira6()
+{
+    let c = document.querySelector(".cadeiras6").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira7()
+{
+    let c = document.querySelector(".cadeiras7").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira8()
+{
+    let c = document.querySelector(".cadeiras8").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira9()
+{
+    let c = document.querySelector(".cadeiras9").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
+function ocuparcadeira10()
+{
+    let c = document.querySelector(".cadeiras10").style.backgroundColor = 'green'
+    alert ("lugar escolhido")
+}
 

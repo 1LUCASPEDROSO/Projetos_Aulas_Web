@@ -5,19 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <div class="container">
+        <div class="navbar1">
+            <ul class="ulnavbar1">
+                <li><a href="index.html">inicio</a></li>
+                <li>filmes</li>
+                <li>contato</li>
+                <div class="divbtn">
+                    <input type="search" name="pesquisar" id="pesquisa">
+                    <label for="pesquisa" class="inputpesquisa"><span class="material-symbols-outlined">
+                        search
+                        </span></label>
+                </div>
+            </ul>
+        </div>
         <div class="bunner">
-            <h1 class="h1">filmes em cartaz</h1>
+            <h1 class="h1index">filmes em cartaz</h1>
         </div> 
         <div class="tableafilmes">
             <table>
                 <thead>
-                    <th> <img src="https://br.web.img2.acsta.net/c_150_200/pictures/22/10/18/22/38/0636138.jpg" alt="Adão negro"></th>
-                    <th> <img src="https://br.web.img3.acsta.net/c_150_200/pictures/22/06/01/14/15/4136622.jpg" alt="peter Vont Kant"></th>
-                    <th><img src="https://br.web.img3.acsta.net/c_150_200/pictures/22/10/19/19/15/0259241.png" alt="noite de paris"></th>
-                    <th><img src="https://br.web.img3.acsta.net/c_150_200/pictures/22/10/19/19/10/1369801.png" alt="Socieade do medo"></th>
+                    <th> <img  id="imgfilmes" src="https://br.web.img2.acsta.net/c_150_200/pictures/22/10/18/22/38/0636138.jpg" alt="Adão negro"></th>
+                    <th> <img id="imgfilmes" src="https://br.web.img3.acsta.net/c_150_200/pictures/22/06/01/14/15/4136622.jpg" alt="peter Vont Kant"></th>
+                    <th><img id="imgfilmes" src="https://br.web.img3.acsta.net/c_150_200/pictures/22/10/19/19/15/0259241.png" alt="noite de paris"></th>
+                    <th><img id="imgfilmes" src="https://br.web.img3.acsta.net/c_150_200/pictures/22/10/19/19/10/1369801.png" alt="Socieade do medo"></th>
                 </thead>
                 <tbody>
                     <tr>
@@ -27,36 +41,29 @@
                         <td>Socieade do medo</td>
                     </tr>
                     <tr>
-                    <td><button class="btncompraringresso"><a href="Compararingresso.html">comprar agora</a></button></td>
-                    <td><button class="btncompraringresso"><a href="Compararingresso.html">comprar agora</a></button></td>
-                    <td><button class="btncompraringresso"><a href="Compararingresso.html">comprar agora</a></button></td>
-                    <td><button class="btncompraringresso"><a href="Compararingresso.html">comprar agora</a></button></td>
+                    <td><button class="btncompraringresso"><a href="Compararingresso1.html">comprar agora</a></button></td>
+                    <td><button class="btncompraringresso"><a href="Compararingresso2.html">comprar agora</a></button></td>
+                    <td><button class="btncompraringresso"><a href="Compararingresso3.html">comprar agora</a></button></td>
+                    <td><button class="btncompraringresso"><a href="Compararingresso4.html">comprar agora</a></button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <footer>
+            <div class="navbar">
+                <ul class="ulnavbar">
+                    <li><a href="index.html">inicio</a></li>
+                    <li>filmes</li>
+                    <li>contato</li>
+                    <div class="divbtn">
+                        <input type="search" name="pesquisar" id="pesquisa">
+                        <label for="pesquisa" class="inputpesquisa"><span class="material-symbols-outlined">
+                            search
+                            </span></label>
+                    </div>
+                </ul>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
