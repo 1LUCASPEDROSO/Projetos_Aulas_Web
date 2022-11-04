@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1 class="h1Principal">Cadastro de novos heros</h1>
+    <form action="PHP/filtroDados.php" method="post">
+        <label class="LabelsCadastro" for="nomeHero">Nome for hero:</label>
+        <input class="inputcadastro" type="text" name="nomeHero" id="nomeHero">
+        <label class="LabelsCadastro"for="EscolaHero">Escola:</label>
+        <input class="inputcadastro" type="text" name="escolaHero" id="EscolaHero">
+        <label class="LabelsCadastro" for="Senha">Senha:</label>
+        <input class="inputcadastro" type="password" name="Senha" id="Senha">
+        <label class="LabelsCadastro" for="DataNascimento">Data de nascimento</label>
+        <input class="inputcadastro" type="date" name="DataNascimento" id="DataNascimento">
+        <input class="inputcadastro" type="radio" name="favHero" id="Phero" value="all might">
+        <label class="LabelsCadastro" for="Phero">all might</label>
+        <input class="inputcadastro" type="radio" name="favHero" id="Phero2" value="Aizawa">
+        <label class="LabelsCadastro" for="Phero2">Aiwaza</label>
+        <input type="submit" value="Validar">
+        <input type="reset" value="limpar dados">
+
+
+    </form>
+</body>
+</html>
