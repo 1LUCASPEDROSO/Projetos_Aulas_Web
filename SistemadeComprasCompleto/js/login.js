@@ -1,27 +1,25 @@
 function cadastrarlogin() {
-    var email = document.querySelector("#Email").value
-    var senha = document.querySelector("#Senha").value
-    console.log(email,senha)
-    alert("email:"+email,"senha:"+senha)
-    window.open("telaProdutos.html");
+    var emailCadastro = document.querySelector("#EmailCadastro").value;
+    var senhaCadastro = document.querySelector("#SenhaCadastro").value;
+    console.log(emailCadastro,senhaCadastro);
+    alert("email:"+emailCadastro,"senha:"+senhaCadastro);
+    window.open("TelaProdutos.html");
 }
-function adcsenha ()
-{
-    var Dados = new Array();
-    Dados[Dados.length] = new email,senha;
-}
+
 function Validarlogin() {
     var email = document.querySelector("#Email").value
     var senha = document.querySelector("#Senha").value
-    for(let i; i< Dados.length; i++)
-    {
-        if(email && senha != Dados[Dados.lenght]){
-            alert("login inexistente")
-            window.open("TelaCadastro.html")
-        }
-    }
-    
 
+    if(email != "pedrosolucas1745@gmail.com" || senha != "pedro2014")
+    {
+        alert("login incorreto ou senha incorretos / Login inexistente")
+        window.open("TelaCadastro.html")
+    }
+
+    else
+    {
+       window.open("TelaProdutos.html")
+    }
     
 }
 

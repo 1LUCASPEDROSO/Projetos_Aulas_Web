@@ -94,3 +94,18 @@ footer
     height: 10vh;
     font-family: 'Lato', sans-serif;
 }
+#formalabels
+{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+#Formulariologin
+{
+    display:grid;
+    justify-content: center;
+    color: red;
+}
+#btnLogin
+{
+ margin-top: 15px;
+}
