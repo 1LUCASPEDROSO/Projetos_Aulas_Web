@@ -104,8 +104,11 @@ footer
     display:grid;
     justify-content: center;
     color: red;
+    font-weight: bold;
+    text-align: center;
 }
 #btnLogin
 {
  margin-top: 15px;
+ width: 200%;
 }

@@ -7,10 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <?php>
+    <?php
     echo(" <h1>Error 404</h1>");
-    echo("<p>recarregue a pagina novamente</p>");
-    echo(" <button><a href='index.html'></a></button>");
-    <?>
+    echo(" <p><a href='http://localhost/SistemadeComprasCompleto/'</a>recarregue a pagina novamente</p>");
+    ?>
 </body>
 </html>
