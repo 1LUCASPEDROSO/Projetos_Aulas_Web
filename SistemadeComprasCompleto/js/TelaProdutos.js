@@ -37,6 +37,8 @@ function mostrarcarrinho()
     write('<td>',total,'</td>')
     write('</tr></table>')
     write('<button class="btnaddcarrinho"><a href="TelaProdutos.html">voltar a pagina inicial</a></button')
+    write('<button> testando botão</button>')
+    write('<button class="btnaddcarrinho" action="Enviaremail()" method="post">Mandar Dados por email</button')
     write('<footer><p class="pfooter">Todos os direitos rezervados a 1drakoon1</footer>')
     write('</body></html>')
 }
