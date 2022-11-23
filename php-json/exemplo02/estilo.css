@@ -1,0 +1,24 @@
+
+#getdados
+{
+    margin-bottom: 20%;
+    font-size: 30px;
+    background-color: brown;
+    color: aliceblue;
+}
+
+table,th,td
+{
+    border: solid 1px rgb(6, 4, 142);
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+th
+{
+    font-weight: bold;
+}
+tr:nth-child(1)
+{
+    background-color: rgb(98, 243, 243);
+}

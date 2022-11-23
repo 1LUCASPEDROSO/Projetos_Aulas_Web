@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Imc</title>
+</head>
+<body>
+    <h1 class="h1">Calculadora de Imc</h1>
+    <form action="./php/controle.php" method="post">
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" name="altura" placeholder="Ex: 160">
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" name="peso" placeholder="Ex: 62">
+        <input type="radio" name="genero" id="homem" value="1">
+        <label for="homem">Homem</label>
+        <input type="radio" name="genero" id="Mulher" value="2">
+        <label for="homem">Mulher</label>
+        <input type="submit" value="Enviar dados">
+    </form>
+</body>
+</html>

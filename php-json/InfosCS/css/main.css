@@ -1,0 +1,12 @@
+#btnImportarDados
+{
+   width: 50%;
+   height: 150px;
+   background-color:red;
+   color: blueviolet;
+}
+#saidaDados
+{
+   width: 100%;
+   height: 50vh;
+}

@@ -4,7 +4,8 @@ $jsondata = '[
     {"nome": "thiago","idade":"32","UC":"Desenvolver-backend"},
     {"nome": "1drakoon1","idade":"20","UC":"Desenvolver-backend"},
     {"nome": "gabe-monta","idade":"19","UC":"Desenvolver-backend"},
-    {"nome": "Gilmar","idade":"46","UC":"Desenvolver-backend"}
+    {"nome": "Gilmar","idade":"46","UC":"Desenvolver-backend"},
+    {"nome": "fernando","idade":"1745","UC":"Ddos","champion":"fallen"}
 ]';
 // criando variavel para decodificar Json e converter dados para um array
 $JsonDescodificando = json_decode($jsondata,true);
