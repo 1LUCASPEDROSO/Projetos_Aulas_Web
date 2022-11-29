@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+    <p class="h1 paragrafo01">CALCULADORA</p>
+    <form method="post" action="../Controle/CalculadoraControle.php" name="form1">
+        <fieldset>
+            <legend>OPERAÇÕES</legend>
+            <label for="txtvalor1" class="form-label">Informe o 1º nº</label>
+            <input type="number" name="txtvalor1" id="txtvalor1" class="form-control">
+            <label for="txtvalor2" class="form-label">Informe o 2º nº</label>
+            <input type="number" name="txtvalor2" id="txtvalor2" class="form-control">
+            <fieldset>
+                <legend>Escolha a operação</legend>
+
+                <input type="radio" name="rdoperacao" id="Radio_0" value="1">
+                <label>SOMAR</label>
+                <br>
+                <input type="radio" name="rdoperacao" id="Radio_1" value="2">
+                <label>SUBTRAIR</label>
+                <br>
+                <input type="radio" name="rdoperacao" id="Radio_2" value="3">
+                <label>MULTIPLICAR</label>
+                <br>
+                <input type="radio" name="rdoperacao" id="Radio_3" value="4">
+                <label>DIVIDIR</label>
+            </fieldset>
+            <button type="submit" class="btn btn-success">CALCULAR</button>
+            <button type="reset" class="btn btn-danger">LIMPAR</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="ContainerMain">
+        <div class="ContainerLogin">
+            <h1>Cadastrar</h1>
+            <img  id="imagemLogin" src="imagens/imagemLogin.png" alt="Login">
+            <form action="php/Dadosuser.php" method="post">
+                <label for="Email">Email</label>
+                <input type="Email" id="EmailCadastro">
+                <label for="Senha">Senha</label>
+                <input type="password" id="SenhaCadastro">
+                <button id="btnCadastrar" onclick="cadastrarlogin()">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
