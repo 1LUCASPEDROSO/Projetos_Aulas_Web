@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>    
+    <title>Gerência de dados</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>   
+</head>
+<body>
+    <form method="post" action="inserir.php">
+        <table>
+            <th>CADASTRAR CONTATO</th>
+            <tr>
+                <td>NOME: </td>
+                <td><input type="text" name="nome" required></td>
+            </tr>
+            <tr>
+                <td>TELEFONE CELULAR: </td>
+                <td><input type="text" name="tel_celular" required></td>
+            </tr>
+            <tr>
+                <td>TELEFONE FIXO: </td>
+                <td><input type="text" name="tel_fixo"></td>
+            </tr>
+            <tr>
+                <td>EMAIL: </td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>ANOTAÇÃO: </td>
+                <td><textarea name="anotacao" cols="25" rows="8"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="CADASTRAR"></td>
+                <td><input type="reset" value="LIMPAR"></td>
+            </tr>
+        </table>
+    </form>
+    <!--listar-->
+ <hr size="10" width="100%">
+ <form action="listar.php" method="post">
+    <table>
+        <th>Mostrar contatos</th>
+        <tr>
+            <td>Abrir contatos.</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Enviar"></td>
+        </tr>
+    </table>
+
+ </form>
+    <!--apagar-->
+    <hr size="10" width="100%">
+    <form action="apagar.php" method="post">
+       <table>
+           <th>Apagar contato</th>
+           <tr>
+               <td>Digite o numero do registro de contato que deseja apagar.</td>
+               <td><input type="number" name="registro" id="registro"></td>
+           </tr>
+           <tr>
+               <td>&nbsp;</td>
+           </tr>
+           <tr>
+               <td><input type="submit" value="apagar"></td>
+               <td><input type="reset" value="Limpar campos"></td>
+           </tr>
+       </table>
+   
+    </form>
+    <!--atualizar-->
+    <hr size="10" width="100%">
+    <form action="atualizar.PHP" method="post">
+        <table>
+            <th>Atualizar contatos</th>
+            <tr>
+                <td>\digite o numero do registro que deseja atualizar:</td>
+                <td> <input type="number" name="registroatt" id="registroatt"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="atualizar"></td>
+                <td><input type="reset" value="Limpar campos"></td>
+        </table>
+
+
+
+    </form>
+</body>
+</html>
