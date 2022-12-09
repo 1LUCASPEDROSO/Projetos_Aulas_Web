@@ -13,5 +13,37 @@
         <input type="submit" value="Enviar novos dados">
     </form>
     <a href="Index.html"><button>Voltar a pagina inical</button></a>
+    <?php
+include("conexao.php");
+
+$peso_atual = $_POST["peso-atual"];
+$altura_atual = $_POST["altura-atual"];
+$sexo = $_POST["sexo"];
+
+
+$sql = mysqli_query($banco, "insert into usuarios values(null,'$email','$senha','$nome','$idade','$peso_atual','$altura_atual','$sexo');");
+if ($sql) {
+    echo (" novos dados de peso e altura  cadastrados  com sucesso.");
+} else {
+    echo ("Não foi possível cadastrar, tente novamente.");
+    echo ("<br> Causa do erro: " . mysqli_connect_error());
+}
+mysqli_close($banco);
+?>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

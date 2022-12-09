@@ -1,14 +1,17 @@
 <?php
 include("conexao.php");
 $nome = $_POST["nome"];
-$telCelular = $_POST["tel_celular"];
-$telFixo = $_POST["tel_fixo"];
+$senha = $_POST["senha"];
 $email = $_POST["email"];
-$anotacao = $_POST["anotacao"];
+$idade = $_POST["idade"];
+$peso = $_POST["peso"];
+$altura = $_POST["altura"];
+$sexo = $_POST["sexo"];
 
-$sql = mysqli_query($banco, "insert into contatos values(null,'$nome','$telCelular','$telFixo','$email','$anotacao');");
+$sql = mysqli_query($banco, "insert into usuarios values(null,'$email','$senha','$nome','$idade','$peso','$altura','$sexo');");
 if ($sql) {
-    echo ("Contato cadastrado com sucesso.");
+    echo (" cadastrado  com sucesso.");
+    echo ("<a href='Index.html'><button>Voltar a pagina inical</button></a>");
 } else {
     echo ("Não foi possível cadastrar, tente novamente.");
     echo ("<br> Causa do erro: " . mysqli_connect_error());
