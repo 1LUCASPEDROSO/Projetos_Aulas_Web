@@ -18,12 +18,14 @@ include("conexao.php");
 
 $peso_atual = $_POST["peso-atual"];
 $altura_atual = $_POST["altura-atual"];
-$sexo = $_POST["sexo"];
+//$sexo = $_POST["sexo"];
+    $teste = $_COOKIE['login'];
 
-
-$sql = mysqli_query($banco, "insert into usuarios values(null,'$email','$senha','$nome','$idade','$peso_atual','$altura_atual','$sexo');");
+    echo ($teste);
+$sql = mysqli_query($banco, "insert into usuarios(email,peso,altura) values('$teste',$peso_atual,$altura_atual);");
 if ($sql) {
     echo (" novos dados de peso e altura  cadastrados  com sucesso.");
+    
 } else {
     echo ("Não foi possível cadastrar, tente novamente.");
     echo ("<br> Causa do erro: " . mysqli_connect_error());
