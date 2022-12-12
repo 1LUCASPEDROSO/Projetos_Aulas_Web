@@ -12,7 +12,7 @@
         <input type="float" name="altura-atual" id="altura-atual">
         <input type="submit" value="Enviar novos dados">
     </form>
-    <a href="Index.html"><button>Voltar a pagina inical</button></a>
+    <a href=".../index.html"><button>Voltar a pagina inical</button></a>
     <?php
 include("conexao.php");
 
@@ -24,7 +24,8 @@ $altura_atual = $_POST["altura-atual"];
     echo ($teste);
 $sql = mysqli_query($banco, "insert into usuarios(email,peso,altura) values('$teste',$peso_atual,$altura_atual);");
 if ($sql) {
-    echo (" novos dados de peso e altura  cadastrados  com sucesso.");
+    echo ("novos dados de peso e altura  cadastrados  com sucesso.");
+        header('Location:Resultado.php');
     
 } else {
     echo ("Não foi possível cadastrar, tente novamente.");
