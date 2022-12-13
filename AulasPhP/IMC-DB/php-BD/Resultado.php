@@ -10,7 +10,7 @@
  <?php
   include("conexao.php");
   $teste = $_COOKIE['login'];
-  $sql = mysqli_query($banco, "select  peso,altura from usuarios where email='$teste' order by peso  DESC limit 1;");
+  $sql = mysqli_query($banco, "select  peso,altura from usuarios where email='$teste';");
   $linhas = mysqli_num_rows($sql);
 
   echo("
@@ -30,14 +30,21 @@ for ($i = 0; $i < $linhas; $i++)
      <td>$registro[1]</td>
      </tr>
      ");
-
+     $arrayvazio[] = array('peso'=>$registro[0],'altura'=>$registro[1]);
      $resultado =  $registro[0] / ($registro[1] * $registro[1]);
-
      echo ('imc --> '.$resultado);
 } //  for para percorrer linhas do banco e listar todos os dados
-mysqli_close($banco);
- echo("</table>")
 
- ?>
+$x = json_encode($arrayvazio);
+ echo ("teste".$x);
+ $arquivo = 'dados.json';
+ $file_pointer = fopen($arquivo,'w');
+    fputs($file_pointer, $x);
+// fechando ponteiro 
+fclose($file_pointer);
+
+mysqli_close($banco);
+ echo("</table>");
+?>
 </body>
 </html>
