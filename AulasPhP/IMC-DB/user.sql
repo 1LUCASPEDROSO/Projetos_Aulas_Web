@@ -15,3 +15,4 @@ create table usuarios(
 insert into usuarios value(0,"lucas",20,"pedro","masculino",61.80,1.60,18.12);
 insert into usuarios(email,peso,altura) values('pedrosolucas17452gmail.com',85,1.93);
 drop database cadastro;
+select peso, altura from usuarios where email='pedrosolucas1745@gmail.com' order by DESC limit 1;
