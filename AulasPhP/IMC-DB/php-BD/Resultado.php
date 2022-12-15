@@ -32,11 +32,10 @@ for ($i = 0; $i < $linhas; $i++)
      "); 
      $resultado =  $registro[0] / ($registro[1] * $registro[1]);
      echo ('imc --> '.$resultado);
-     header('location:Listarpesos.php');
 } //  for para percorrer linhas do banco e listar todos os dados
-
 mysqli_close($banco);
  echo("</table>");
 ?>
+<a href="../php-BD/ListarPesos.php">Ver pesos</a>
 </body>
 </html>

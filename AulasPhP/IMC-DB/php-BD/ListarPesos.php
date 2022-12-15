@@ -14,18 +14,16 @@ $sql = mysqli_query($banco, "select  peso from usuarios where email='$teste';");
 $linhas = mysqli_num_rows($sql);
 for ($i = 0; $i < $linhas; $i++) {
     $registro = mysqli_fetch_row($sql);
-}// for para percorrer colunas do banco 
-$arrayvazio[] = array('peso'=>$registro[0]);
-$x = json_encode($arrayvazio);
+    $arrayvazio[] = array('peso'=>$registro[0]);
+    $x = json_encode($arrayvazio);
  echo ("teste".$x);
- $arquivo = 'dados.json';
+ $arquivo = '../json/dadosPeso.json';
  $file_pointer = fopen($arquivo,'w');
     fputs($file_pointer, $x);
+}// for para percorrer colunas do banco 
 // fechando ponteiro 
 fclose($file_pointer);
-
 ?>
-<a href="javascript:mostrarDados()"> testando</a>
-<script src="../js/Grafico.js"></script>
+ <a href="../testeJS.html"> Ver gráficos</a>
 </body>
 </html>
