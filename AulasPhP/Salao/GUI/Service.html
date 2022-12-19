@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+</head>
+<body>
+    <form action="../Controlers/dadosServico.php" method="post">
+        <label for="nome" id="labelNomeCad">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <label for="telefone" id="labelTelefone">Telefone:</label>
+        <input type="number" name="telefone" id="telefone">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <label for="data" id="labeldata">Data:</label>
+        <input type="date" name="data" id="data">
+        <label for="hora">Hora:</label>
+        <input type="time" name="hora" id="hora">
+        <input type="submit" value="Enviar" id="btnEnviar">
+        <input type="reset" value="Apagar dados" id="btnApagar">
+    </form>
+</body>
+</html>
