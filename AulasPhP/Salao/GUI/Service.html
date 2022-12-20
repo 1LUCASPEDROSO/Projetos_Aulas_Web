@@ -7,7 +7,7 @@
     <title>Serviços</title>
 </head>
 <body>
-    <form action="../Controlers/dadosServico.php" method="post">
+    <form action="../Controllers/dadosServico.php" method="post">
         <label for="nome" id="labelNomeCad">Nome:</label>
         <input type="text" name="nome" id="nome">
         <label for="telefone" id="labelTelefone">Telefone:</label>
@@ -18,6 +18,16 @@
         <input type="date" name="data" id="data">
         <label for="hora">Hora:</label>
         <input type="time" name="hora" id="hora">
+        <input type="radio" name="Empregado" id="empregado" value="daniela">
+        <label for="empregado">Daniela: Pedicure</label>
+        <input type="radio" name="Empregado" id="empregado" value="lucas">
+        <label for="empregado">lucas: Barbeiro</label>
+        <input type="radio" name="Empregado" id="empregado" value="Luigi">
+        <label for="empregado">Luigi: Barbeiro</label>
+        <input type="radio" name="Empregado" id="empregado" value="camila">
+        <label for="empregado">Camila: Naildesigner</label>
+        <input type="radio" name="Empregado" id="empregado" value="fernanda">
+        <label for="empregado">fernanda: Cabelereira</label>
         <input type="submit" value="Enviar" id="btnEnviar">
         <input type="reset" value="Apagar dados" id="btnApagar">
     </form>
