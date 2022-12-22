@@ -1,6 +1,7 @@
 <?php
  
-        include('../Models/classDados.php');        
+        include('../Models/classDados.php');
+                
         $cd = new dadosServicos;
         $teste = $_POST['nome'];
         $cd->nome = $teste;
@@ -10,9 +11,7 @@
         $cd -> data = $_POST['data'];
         $cd -> hora = $_POST['hora'];
         $cd -> empregado = $_POST['Empregado'];
-        $cd -> inserirDados();
-    
-
+        $cd->inserirDados();
 ?>
 
      

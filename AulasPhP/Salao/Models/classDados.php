@@ -18,8 +18,11 @@ class dadosServicos
 
     public function inserirDados()
     {
+
         include('conexao.php');
-        $sql = mysqli_query($banco, "insert into servicos values(null,'$nome',$telefone,'$email','$data','$hora','$empregado');");
+        $teste = $this->nome;
+        $querry = ("insert into servicos values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> data."','".$this -> hora."','".$this -> empregado."');");
+        $sql = mysqli_query($banco, $querry);
         if ($sql) {
             echo ("serviço cadastrado com sucesso.");
         } else {
@@ -29,6 +32,15 @@ class dadosServicos
         mysqli_close($banco);
     }
 
+    public function teste ()
+    {
+        echo ($this ->nome);
+        echo ($this ->telefone);
+        echo ($this ->email);
+        echo ($this ->data);
+        echo ($this ->hora);
+        echo ($this ->empregado);
+    }
 
 
 }

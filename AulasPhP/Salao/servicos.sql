@@ -9,5 +9,14 @@ create table servicos(
  data_servico date not null,
  hora time not null,
  empregado varchar(80) not null
+ foreign key(empregado) 
 
+);
+
+create table empregados(
+ id_empregado int not null auto_increment primary key,
+ nome varchar(80),
+ email varchar(80) not null,
+ telefone int(14) not null,
+ senha varchar(10)
 );
