@@ -1,6 +1,6 @@
 <?php
  
-        include('../Models/classDados.php');
+        include('../Models/classDadosServicos.php');
                 
         $cd = new dadosServicos;
         $teste = $_POST['nome'];

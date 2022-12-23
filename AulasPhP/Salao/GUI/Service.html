@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Serviços</title>
 </head>
 <body>
     <form action="../Controllers/dadosServico.php" method="post">
         <label for="nome" id="labelNomeCad">Nome:</label>
-        <input type="text" name="nome" id="nome">
+        <input class="w3-input w3-border" type="text" name="nome" id="nome">
         <label for="telefone" id="labelTelefone">Telefone:</label>
-        <input type="number" name="telefone" id="telefone">
+        <input  class="w3-input w3-border"type="number" name="telefone" id="telefone">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
+        <input class="w3-input w3-border" type="email" name="email" id="email">
         <label for="data" id="labeldata">Data:</label>
-        <input type="date" name="data" id="data">
+        <input class="w3-input w3-border" type="date" name="data" id="data">
         <label for="hora">Hora:</label>
-        <input type="time" name="hora" id="hora">
-        <input type="radio" name="Empregado" id="empregado" value="daniela">
+        <input class="w3-input w3-border" type="time" name="hora" id="hora">
+        <input class="w3-input w3-border" type="radio" name="Empregado" id="empregado" value="1">
         <label for="empregado">Daniela: Pedicure</label>
-        <input type="radio" name="Empregado" id="empregado" value="lucas">
+        <input class="w3-input w3-border" type="radio" name="Empregado" id="empregado" value="2">
         <label for="empregado">lucas: Barbeiro</label>
-        <input type="radio" name="Empregado" id="empregado" value="Luigi">
+        <input class="w3-input w3-border" type="radio" name="Empregado" id="empregado" value="3">
         <label for="empregado">Luigi: Barbeiro</label>
-        <input type="radio" name="Empregado" id="empregado" value="camila">
+        <input class="w3-input w3-border" type="radio" name="Empregado" id="empregado" value="4">
         <label for="empregado">Camila: Naildesigner</label>
-        <input type="radio" name="Empregado" id="empregado" value="fernanda">
+        <input class="w3-input w3-border" type="radio" name="Empregado" id="empregado" value="5">
         <label for="empregado">fernanda: Cabelereira</label>
-        <input type="submit" value="Enviar" id="btnEnviar">
-        <input type="reset" value="Apagar dados" id="btnApagar">
+        <input class="w3-input w3-border" type="submit" value="Enviar" id="btnEnviar">
+        <input class="w3-input w3-border" type="reset" value="Apagar dados" id="btnApagar">
     </form>
 </body>
 </html>
