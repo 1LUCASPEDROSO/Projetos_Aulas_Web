@@ -15,13 +15,30 @@ class dadosServicos
         $this->$atributo = $valor;
     }
 
-    public function inserirDados()
+    public function inserirDadosPousada1()
     {
-
+        include('classDados.php');
+        $CD = new dadosServicos;
         include('conexao.php');
-        $querry = ("insert into servicos values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'";');
+        $querry = ("insert into pousada1 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'";');
         $sql = mysqli_query($banco, $querry);
-        listarDados();
+        $CD -> listarDados();
+        if ($sql) {
+            echo ("serviço cadastrado com sucesso.");
+        } else {
+            echo ("Não foi possível cadastrar, tente novamente.");
+            echo ("<br> Causa do erro: " . mysqli_connect_error());
+        }
+        mysqli_close($banco);
+    }
+    public function inserirDadosPousada2()
+    {
+        include('classDados.php');
+        $CD = new dadosServicos;
+        include('conexao.php');
+        $querry = ("insert into pousada2 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'";');
+        $sql = mysqli_query($banco, $querry);
+        $CD -> listarDados();
         if ($sql) {
             echo ("serviço cadastrado com sucesso.");
         } else {

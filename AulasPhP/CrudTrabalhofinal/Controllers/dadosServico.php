@@ -6,7 +6,11 @@
         $cd -> email = $_POST['email'];
         $cd -> data = $_POST['data'];
         $cd -> pousada = $_POST['pousada'];
-        $cd->inserirDados();
+        if($pousada = 1){
+                $cd->inserirDadosPousada1();
+        } else {
+                 $cd->inserirDadosPousada2();
+        }    
 ?>
 
      
