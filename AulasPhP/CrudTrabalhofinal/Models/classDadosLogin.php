@@ -15,7 +15,7 @@
     public function realizarLogin()
     {
         include('conexao.php');
-        $querry = ("select '" . $this->login . "','" . $this->senha . "'. from ADM where email = '" . $this->email . "' and senha='" . $this->senha . "';");
+        $querry = ("select '" . $this->login . "','" . $this->senha . "'. from administracao where email = '" . $this->email . "' and senha='" . $this->senha . "';");
         $sql = mysqli_query($banco, $querry);
         if ($sql) {
             echo ("login feito  com sucesso.");
