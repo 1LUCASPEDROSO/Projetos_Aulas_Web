@@ -20,12 +20,12 @@ class dadosServicos
 
     public function inserirDadosPousada1()
     {
-        include('classDados.php');
-        $CD = new dadosServicos;
+        include('classDadosOcupacao.php');
+        $CDO = new dadosOcupacao;
         include('conexao.php');
         $querry = ("insert into pousada1 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'",'.$this -> $totalPessoas."','".$this -> quartos."';");
         $sql = mysqli_query($banco, $querry);
-        $CD -> ProcurarOcupacaoPousada1();
+        $CDO -> ProcurarOcupacaoPousada1();
         if ($sql) {
             echo ("serviço cadastrado com sucesso.");
         } else {
@@ -36,12 +36,12 @@ class dadosServicos
     }
     public function inserirDadosPousada2()
     {
-        include('classDados.php');
-        $CD = new dadosServicos;
+        include('classDadosOcupacao.php');
+        $CDO = new dadosOcupacao;
         include('conexao.php');
         $querry = ("insert into pousada2 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'";');
         $sql = mysqli_query($banco, $querry);
-        $CD -> ProcurarOcupacaoPousada2();
+        $CDO-> ProcurarOcupacaoPousada2();
         if ($sql) {
             echo ("serviço cadastrado com sucesso.");
         } else {
@@ -50,40 +50,7 @@ class dadosServicos
         }
         mysqli_close($banco);
     }
-    public function ProcurarOcupacaoPousada1()
-    {
-        include('conexao.php');
-        $querry = ("select ".$this ->dataEntrada."from pousada1 where ".$this -> dataEntrada.";");
-        $sql = mysqli_query($banco, $querry);
-        $linhas = mysqli_num_rows($sql);
-        if ($linhas >= 1) {
-            echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
-        }
-        if ($sql) {
-            echo ("serviço cadastrado com sucesso.");
-        } else {
-            echo ("Não foi possível cadastrar, tente novamente.");
-            echo ("<br> Causa do erro: " . mysqli_connect_error());
-        }
-        mysqli_close($banco);
-    }
-    public function ProcurarOcupacaoPousada2()
-    {
-        include('conexao.php');
-        $querry = ("select '".$this ->dataEntrada."from pousada2 where '".$this -> dataEntrada.";");
-        $sql = mysqli_query($banco, $querry);
-        $linhas = mysqli_num_rows($sql);
-        if ($linhas >= 1) {
-            echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
-        }
-        if ($sql) {
-            echo ("serviço cadastrado com sucesso.");
-        } else {
-            echo ("Não foi possível cadastrar, tente novamente.");
-            echo ("<br> Causa do erro: " . mysqli_connect_error());
-        }
-        mysqli_close($banco);
-    }
+    
     public function listarOcupacoespousada1()
     {
         include('conexao.php');
