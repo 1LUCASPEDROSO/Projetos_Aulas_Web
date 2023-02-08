@@ -5,7 +5,7 @@
         $cd -> telefone = $_POST['telefone'];
         $cd -> email = $_POST['email'];
         $cd -> data = $_POST['data'];      
-        $cd -> pousada = ['pousada'];
+        $cd -> pousada = 2;
         $cd->pessoa = $_POST['totalPessoa'];    
         $cd->quartos = $_POST['quartos'];
 

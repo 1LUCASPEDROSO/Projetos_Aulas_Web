@@ -20,12 +20,17 @@ class dadosServicos
 
     public function inserirDadosPousada1()
     {
-        include('classDadosOcupacao.php');
-        $CDO = new dadosOcupacao;
+        echo('dehfwejofheopfhqeo');
         include('conexao.php');
-        $querry = ("insert into pousada1 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'",'.$this -> $totalPessoas."','".$this -> quartos."';");
+        $querry = "insert into pousada1 values (null,'lucas1','54948904894','pedrosolucas1745@gmail.com','2023-07-12','2023-09-15','4','1';";
         $sql = mysqli_query($banco, $querry);
-        $CDO -> ProcurarOcupacaoPousada1();
+        //where".$this -> dataEntrada.";"
+       // $querry2 = ("select ".$this ->dataEntrada." from pousada1;");
+     //   $sql1 = mysqli_query($banco, $querry2);
+      //  $linhas = mysqli_affected_rows($banco);
+     //   if ($linhas) {
+    //        echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
+   //     }
         if ($sql) {
             echo ("serviço cadastrado com sucesso.");
         } else {
@@ -36,12 +41,16 @@ class dadosServicos
     }
     public function inserirDadosPousada2()
     {
-        include('classDadosOcupacao.php');
-        $CDO = new dadosOcupacao;
+        echo ('sdbqdgoduiqgodiuqdghqioudghqioudqhudqhiod');
         include('conexao.php');
-        $querry = ("insert into pousada2 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'";');
+        $querry = ("insert into pousada2 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'",'.$this -> totalPessoa."','".$this -> quartos."';");
         $sql = mysqli_query($banco, $querry);
-        $CDO-> ProcurarOcupacaoPousada2();
+        $_querry2 = ("select ".$this ->dataEntrada."from pousada1 where ".$this -> dataEntrada.";");
+        $sql1 = mysqli_query($banco, $querry2);
+        $linhas = mysqli_num_rows($sq1);
+        if ($linhas >= 1) {
+            echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
+        }
         if ($sql) {
             echo ("serviço cadastrado com sucesso.");
         } else {
