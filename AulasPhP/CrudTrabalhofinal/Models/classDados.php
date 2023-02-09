@@ -9,66 +9,73 @@ class dadosServicos
     private $dataSaida;
     private $totalPessoa;
     private $quartos;
-
-    public function __get($atributo){
+    public function __get($atributo)
+    {
         return $this->$atributo;
     }
-
-    public function __set($atributo, $valor){
+    public function __set($atributo, $valor)
+    {
         $this->$atributo = $valor;
     }
-
     public function inserirDadosPousada1()
     {
-        echo('dehfwejofheopfhqeo');
+        //implode();
+        // explode();
+        echo ('chegou na InserirDadosPousada 1');
         include('conexao.php');
-        $querry = "insert into pousada1 values (null,'lucas1','54948904894','pedrosolucas1745@gmail.com','2023-07-12','2023-09-15','4','1';";
-        $sql = mysqli_query($banco, $querry);
-        //where".$this -> dataEntrada.";"
-       // $querry2 = ("select ".$this ->dataEntrada." from pousada1;");
-     //   $sql1 = mysqli_query($banco, $querry2);
-      //  $linhas = mysqli_affected_rows($banco);
-     //   if ($linhas) {
-    //        echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
-   //     }
-        if ($sql) {
-            echo ("serviço cadastrado com sucesso.");
+        $querry2 = ("select '" . $this->dataEntrada . "' from pousada1 where data_entrada = '" . $this->dataEntrada . "';");
+        $sql1 = mysqli_query($banco, $querry2);
+        $linhas = mysqli_affected_rows($banco);
+        if ($linhas = 1) {
+            echo ('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
         } else {
-            echo ("Não foi possível cadastrar, tente novamente.");
-            echo ("<br> Causa do erro: " . mysqli_connect_error());
-        }
-        mysqli_close($banco);
+            $querry = ("insert into pousada1 values(null,'" . $this->nome . "','" . $this->telefone . "','" . $this->email . "','" . $this->dataEntrada . "','" . $this->dataSaida . "','" . $this->totalPessoa . "','" . $this->quartos . "');");
+            $sql = mysqli_query($banco, $querry);
+            if ($sql) {
+                echo ("serviço cadastrado com sucesso.");
+            } else {
+                echo ("Não foi possível cadastrar, tente novamente.");
+                echo ("<br> Causa do erro: " . mysqli_connect_error());
+            }
+            mysqli_close($banco);
+        } // fim else querry2
     }
     public function inserirDadosPousada2()
     {
-        echo ('sdbqdgoduiqgodiuqdghqioudghqioudqhudqhiod');
+        echo ('chegou na InserirDadosPousada 2');
         include('conexao.php');
-        $querry = ("insert into pousada2 values(null,'".$this -> nome."',".$this -> telefone.",'".$this -> email."','".$this -> dataEntrada."','".$this -> dataSaida.'",'.$this -> totalPessoa."','".$this -> quartos."';");
-        $sql = mysqli_query($banco, $querry);
-        $_querry2 = ("select ".$this ->dataEntrada."from pousada1 where ".$this -> dataEntrada.";");
+        $querry2 = ("select '" . $this->dataEntrada . "' from pousada2 where data_entrada = '" . $this->dataEntrada . "';");
         $sql1 = mysqli_query($banco, $querry2);
-        $linhas = mysqli_num_rows($sq1);
-        if ($linhas >= 1) {
-            echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
-        }
-        if ($sql) {
-            echo ("serviço cadastrado com sucesso.");
+        $linhas = mysqli_affected_rows($banco);
+        if ($linhas = 1) {
+            echo ('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
         } else {
-            echo ("Não foi possível cadastrar, tente novamente.");
-            echo ("<br> Causa do erro: " . mysqli_connect_error());
-        }
-        mysqli_close($banco);
+            $querry = ("insert into pousada2 values(null,'" . $this->nome . "','" . $this->telefone . "','" . $this->email . "','" . $this->dataEntrada . "','" . $this->dataSaida . "','" . $this->totalPessoa . "','" . $this->quartos . "');");
+            $sql = mysqli_query($banco, $querry);
+            if ($sql) {
+                echo ("serviço cadastrado com sucesso.");
+            } else {
+                echo ("Não foi possível cadastrar, tente novamente.");
+                echo ("<br> Causa do erro: " . mysqli_connect_error());
+            }
+            mysqli_close($banco);
+        } // fim else querry2
     }
-    
     public function listarOcupacoespousada1()
     {
         include('conexao.php');
         $querry = ("select * from pousada1");
+        $sql = mysqli_query($banco, $querry);
         $linhas = mysqli_num_rows($sql);
         echo ("
-            <h1>Lista de servicos pousadas 2 estrelas</h1><br><br>
+            <head>
+            <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+            </head
+            <body>
+            <h1 class='w3-center'>Lista de serviços pousada 2 estrelas</h1><br><br>
             <table class='w3-table-all w3-hoverable'>
             <tr>
+            <td>ID:</td>
             <td>Nome cliente</td>
             <td>Telefone cliente</td>
             <td>Email cliente </td>
@@ -92,17 +99,22 @@ class dadosServicos
             </tr>
         ");
         } //  for para percorrer linhas do banco e listar todos os dados
-        echo ("</table>");
-    mysqli_close($banco);
+        echo ("</table> </body>");
+        mysqli_close($banco);
     }
     public function listarOcupacoespousada2()
     {
         include('conexao.php');
         $querry = ("select * from pousada2");
+        $sql = mysqli_query($banco, $querry);
         $linhas = mysqli_num_rows($sql);
         echo ("
-            <h1>Lista de servicos pousada 4 estrelas</h1><br><br>
-            <table class='w3-table-all w3-hoverable'>
+        <head>
+        <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+        </head
+        <body>
+        <h1 class='w3-center'>Lista de serviços pousada 4 estrelas</h1><br><br>
+        <table class='w3-table-all w3-hoverable'>
             <tr>
             <td>Nome cliente</td>
             <td>Telefone cliente</td>
@@ -127,17 +139,8 @@ class dadosServicos
             </tr>
         ");
         } //  for para percorrer linhas do banco e listar todos os dados
-        echo ("</table>");
-    mysqli_close($banco);
+        echo ("</table> </body>");
+        mysqli_close($banco);
     }
 }
-
-
-
-
-
-
-
-
-
 ?>

@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Serviços</title>
 </head>
+
 <body>
-    <form action="../Controllers/dadosServico.php" method="post">
+    <div class="w3-panel w3-round w3-gray">
+        <h1 class="w3-center w3-h1">Dados Rezerva</h1>
+    </div>
+    <form action="../Controllers/dadosServico.php" method="post" class="w3-container">
         <label for="nome" id="labelNomeCad">Nome:</label>
-        <input type="text" name="nome" id="nome">
-
+        <input type="text" name="nome" id="nome" class="w3-input">
         <label for="telefone" id="labelTelefone">Telefone:</label>
-        <input type="number" name="telefone" id="telefone">
-
+        <input type="number" name="telefone" id="telefone" class="w3-input">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-
+        <input type="email" name="email" id="email" class="w3-input">
         <label for="data" id="labeldata">Data Entrada:</label>
-        <input type="date" name="data" id="data">
+        <input type="date" name="dataEntrada" id="data" class="w3-input">
         <label for="data" id="labeldata">Data saida:</label>
-        <input type="date" name="data" id="data">
-        
-        <input type="radio" name="pousada" id="pousada1" value="1">
+        <input type="date" name="dataSaida" id="data" class="w3-input">
+        <br><br>
+        <input type="radio" name="pousada" id="pousada1" value="1" class="w3-radio">
         <label for="pousada1">Pousada 2 estrelas: 97/P</label>
-        <input type="radio" name="pousada" id="pousada2" value="2">
+        <input type="radio" name="pousada" id="pousada2" value="2" class="w3-radio">
         <label for="pousada2">Pousada 4 estrelas: 157/P</label>
-        <label for="totalPessoa">Pessoas:</label>
-        <input type="number" name="totalPessoa" id="totalPessoa">
+        <br><br>
+        <label for="totalPessoa">Quantidade de pessoas:</label>
+        <br> <br>
+        <input type="number" name="totalPessoa" id="totalPessoa" class="w3-input">
         <label for="quartos">Quartos:</label>
-        <input type="number" name="quartos" id="quartos">
-        
-
+        <input type="number" name="quartos" id="quartos" class="w3-input">
+        <br><br>
         <input type="submit" value="Enviar" id="btnEnviar">
         <input type="reset" value="Apagar dados" id="btnApagar">
     </form>
+    <br>
+    <div class="w3-container">
+        <a href="../index.html"><button>Pagina inicial</button></a>
+    </div>
 </body>
 </html>
