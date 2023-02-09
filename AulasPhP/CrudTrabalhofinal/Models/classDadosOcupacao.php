@@ -12,9 +12,7 @@
         if ($linhas >= 1) {
             echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
         }
-        if ($sql) {
-            echo ("serviço cadastrado com sucesso.");
-        } else {
+        if (!$sql) {
             echo ("Não foi possível cadastrar, tente novamente.");
             echo ("<br> Causa do erro: " . mysqli_connect_error());
         }
@@ -31,12 +29,10 @@
         if ($linhas >= 1) {
             echo('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
         }
-        if ($sql) {
-            echo ("serviço cadastrado com sucesso.");
-        } else {
+        if (!$sql) {
             echo ("Não foi possível cadastrar, tente novamente.");
             echo ("<br> Causa do erro: " . mysqli_connect_error());
-        }
+        } 
         mysqli_close($banco);
     }
  }

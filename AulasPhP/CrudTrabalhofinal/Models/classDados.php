@@ -26,8 +26,8 @@ class dadosServicos
         $querry2 = ("select '" . $this->dataEntrada . "' from pousada1 where data_entrada = '" . $this->dataEntrada . "';");
         $sql1 = mysqli_query($banco, $querry2);
         $linhas = mysqli_affected_rows($banco);
-        if ($linhas = 1) {
-            echo ('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
+        if ($linhas == 1) {
+            echo ('Essa data ja foi rezervada por algum user, por favor escolha outra data de entrada');
         } else {
             $querry = ("insert into pousada1 values(null,'" . $this->nome . "','" . $this->telefone . "','" . $this->email . "','" . $this->dataEntrada . "','" . $this->dataSaida . "','" . $this->totalPessoa . "','" . $this->quartos . "');");
             $sql = mysqli_query($banco, $querry);
@@ -47,7 +47,7 @@ class dadosServicos
         $querry2 = ("select '" . $this->dataEntrada . "' from pousada2 where data_entrada = '" . $this->dataEntrada . "';");
         $sql1 = mysqli_query($banco, $querry2);
         $linhas = mysqli_affected_rows($banco);
-        if ($linhas = 1) {
+        if ($linhas >= 1) {
             echo ('Essa data ja ja foi rezervada por algum user, por favor escolha outra data de entrada');
         } else {
             $querry = ("insert into pousada2 values(null,'" . $this->nome . "','" . $this->telefone . "','" . $this->email . "','" . $this->dataEntrada . "','" . $this->dataSaida . "','" . $this->totalPessoa . "','" . $this->quartos . "');");
@@ -96,6 +96,7 @@ class dadosServicos
             <td>$registro[4]</td>
             <td>$registro[5]</td>
             <td>$registro[6]</td>
+            <td>$registro[7]</td>
             </tr>
         ");
         } //  for para percorrer linhas do banco e listar todos os dados
@@ -136,11 +137,27 @@ class dadosServicos
             <td>$registro[4]</td>
             <td>$registro[5]</td>
             <td>$registro[6]</td>
+            <td>$registro[7]</td>
             </tr>
         ");
         } //  for para percorrer linhas do banco e listar todos os dados
         echo ("</table> </body>");
         mysqli_close($banco);
+        echo ('<br>');
+        echo('<ahref=../index.html><button>pagina inicial</button></a>');
     }
+    public function atualizarDados()
+    {
+        include('conexao.php');
+        $querry = ("select * from pousada2");
+        $sql = mysqli_query($banco, $querry);
+        $linhas = mysqli_num_rows($sql);
+        echo ("
+        <head>
+        <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+        </head
+        <body>
+     ");
+    } 
 }
 ?>

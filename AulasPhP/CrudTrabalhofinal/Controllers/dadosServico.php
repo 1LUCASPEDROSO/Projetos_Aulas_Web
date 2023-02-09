@@ -2,23 +2,14 @@
 include('../Models/classDados.php');
 
 $cd = new dadosServicos;
-echo ('<br><br>');
-echo ($cd->nome = $_POST['nome']);
-echo ('<br><br>');
-echo ($cd->telefone = $_POST['telefone']);
-echo ('<br><br>');
-echo ($cd->email = $_POST['email']);
-echo ('<br><br>');
-echo ($cd->data = $_POST['dataEntrada']);
-echo ('<br><br>');
-echo ($cd->data = $_POST['dataSaida']);
-echo ('<br><br>');
-echo ('Pousada -->' . $cd->pousada = $_POST['pousada']);
-echo ('<br><br>');
-echo ('total de pessoas -->' . $cd->pessoa = $_POST['totalPessoa']);
-echo ('<br><br>');
-echo ('total de quartos -->' . $cd->quartos = $_POST['quartos']);
-
+$cd ->nome = $_POST['nome'];
+$cd->telefone = $_POST['telefone'];
+$cd->email = $_POST['email'];
+$cd->dataEntrada = $_POST['dataEntrada'];
+$cd->dataSaida = $_POST['dataSaida'];
+$cd->pousada = $_POST['pousada'];
+$cd->pessoa = $_POST['totalPessoa'];
+$cd->quartos = $_POST['quartos'];
 if ($cd->pousada == 1) {
         $cd->inserirDadosPousada1();
 } else {

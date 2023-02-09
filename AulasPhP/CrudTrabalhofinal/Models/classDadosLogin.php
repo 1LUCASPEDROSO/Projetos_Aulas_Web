@@ -22,7 +22,6 @@ class dadosLogin
         $querry = ("select email, senha  from administracao where email = '" . $this->login . "' and senha ='" . $this->senha . "';");
         $sql = mysqli_query($banco, $querry);
         if ($sql == true) {
-            echo ("login feito  com sucesso.");
             $cd->listarOcupacoespousada1();
             $cd->listarOcupacoespousada2();
         } else {
