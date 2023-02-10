@@ -1,6 +1,7 @@
 <?php
 class dadosServicos
 {
+    private $idPousada;
     private $nome;
     private $telefone;
     private $email;
@@ -117,6 +118,7 @@ class dadosServicos
         <h1 class='w3-center'>Lista de serviços pousada 4 estrelas</h1><br><br>
         <table class='w3-table-all w3-hoverable'>
             <tr>
+            <td>ID:</td>
             <td>Nome cliente</td>
             <td>Telefone cliente</td>
             <td>Email cliente </td>
@@ -144,20 +146,57 @@ class dadosServicos
         echo ("</table> </body>");
         mysqli_close($banco);
         echo ('<br>');
-        echo('<ahref=../index.html><button>pagina inicial</button></a>');
+        echo('<a href=../index.html><button>pagina inicial</button></a>');
     }
     public function atualizarDados()
     {
         include('conexao.php');
-        $querry = ("select * from pousada2");
-        $sql = mysqli_query($banco, $querry);
+        $sql = mysqli_query($banco,"select * from pousada1 where id_pousada ='".$this -> idPousada."';");
         $linhas = mysqli_num_rows($sql);
-        echo ("
-        <head>
-        <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
-        </head
-        <body>
-     ");
+        echo("<p> rezerva selecionada</p><br><br>
+        <form method='post' action='classDados.php.php'>
+        <table>
+       ");
+       for ($i = 0; $i < $linhas; $i++)
+       {
+           $registro = mysqli_fetch_row($sql);
+           echo(" <tr>
+                   <td>Registro</td>
+                   <td><input type='number' name='idPousada1' readonly></td>
+                   </tr>
+                   <tr>
+                   <td>Nome</td>
+                   <td><input type='text' name='nome' value='$registro[1]' ></td>
+                   </tr>   
+                   <tr>
+                   <td>tel_celular</td>
+                   <td><input type='text' name='tel_celular' value='$registro[2]' ></td>
+                   </tr>
+                   <tr>
+                   <td>tel_fixo</td>
+                   <td><input type='text' name='tel_fixo' value='$registro[3]' ></td>
+                   </tr>
+                   <tr>
+                   <td>email</td>
+                   <td><input type='text' name='email' value='$registro[4]' ></td>
+                   </tr>
+                   <tr>
+                   <td>Anotação</td>
+                   <td><textarea cols='25' rows='8' name='anotacao'>$registro[5]</textarea></td>
+                   </tr>
+               "); 
+       }
+       echo("
+       <tr>
+           <td>&nbsp;</td>
+       </tr>
+       <tr>
+           <td><input type='submit' value='Cadastrar novos dados'</td>
+       </tr>
+       </table>
+       </form>
+       ");
+        mysqli_close($banco);
     } 
 }
 ?>

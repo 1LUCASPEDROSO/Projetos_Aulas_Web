@@ -24,6 +24,7 @@ class dadosLogin
         if ($sql == true) {
             $cd->listarOcupacoespousada1();
             $cd->listarOcupacoespousada2();
+            $cd->atualizarDados();
         } else {
             echo ("Não foi possível entrar, tente novamente.");
             echo ("<br> Causa do erro: " . mysqli_connect_error());
