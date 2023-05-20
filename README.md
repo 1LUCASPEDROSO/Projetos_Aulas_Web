@@ -1,6 +1,6 @@
 # ProjetosAulaWeb
- Repositório destinado a criação de projetos em aula para web ultilizando frameworks para testes com manipulaçã ode Doom 
-#Linguagens 
+ Repositório destinado a criação de projetos em aula para web ultilizando frameworks para testes com manipulação de Doom 
+# Linguagens 
   HTML
   CSS
   JavaScript
